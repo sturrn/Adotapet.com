@@ -8,6 +8,30 @@ gsap.from("header", {
 });
  
 const tl = gsap.timeline();
+
+gsap.to('#auau',{
+    x: 5,
+    y: 70,
+    rotation: 2,
+    scale: 1,
+    duration: 3,
+    ease:'sine.outIn',
+    repeat: -1,
+    yoyo: true
+    
+})
+
+gsap.to('#auau',{
+    x: 5,
+    y: 70,
+    rotation: 2,
+    scale: 1,
+    duration: 3,
+    ease:'sine.outIn',
+    repeat: -1,
+    yoyo: true
+    
+})
  
 tl.from("#titulo", {
     scale: 1,
@@ -90,3 +114,5 @@ gsap.from(".rodape-conteudo", {
     duration: 0.8,
     ease: "power2.out"
 });
+
+

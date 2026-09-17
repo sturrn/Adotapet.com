@@ -1006,6 +1006,14 @@ body>p {
 
 /*CADASTRO*/
 
+#miau{
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: left;
+    margin: 90px;
+}
+
 #auau{
     font-family: "Oswald", sans-serif;
     font-size: 30px;
@@ -1035,7 +1043,11 @@ body.modo-escuro a {
     border-radius: 20px;
     cursor: pointer;
     background: #333;
-    colot
+    color: w;
+}
+
+div.modo-escuro{
+    
 }
 
 
@@ -1068,10 +1080,5 @@ body.modo-escuro a {
         align-items: center;
         justify-self: center;
     }
-
-    nav {
-        gap:10px;
-        
-    }
-
+    
 }
