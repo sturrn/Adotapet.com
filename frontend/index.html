@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdotaPet.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+      <header>
+        <div>
+            <h1>🐾Adota<span>Pet</span>.com</h1>
+        </div>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="animais.html">Animais</a>
+        </nav>
+        <a href="cadastro.html">
+            <button id="modoEscuro">🌙 Modo escuro</button>
+            <button>Adote agora</button>
+        </a>
+    </header>
+    <main>
+
+        <section id="hero">
+
+            <div id="info_inicial">
+
+                <h2 id="titulo2">
+                    Encontre um novo
+                    <span>melhor amigo.</span>
+               </h2>
+
+                <p>
+                    Dê uma segunda chance a um animal que precisa de um lar.
+                    No AdotaPet, você encontra cães e gatos esperando por
+                    uma família cheia de amor.
+                </p>
+
+                <div id="buttons_inicial">
+
+                    <button class="btn" onclick="window.location.href='#pesquisa_inicial'">
+                        Encontrar um pet
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div>
+                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=80"
+                    alt="Cachorro esperando por adoção" id="img-hero">
+            </div>
+
+        </section>
+
+
+        <section id="pesquisa_inicial">
+
+            <div id="div_lupa">
+
+
+
+                <p id="lupa">🔎</p>
+
+                <input type="text" id="pesquisa" placeholder="Onde você gostaria de encontrar seu novo amigo?">
+                <div id="animais"></div>
+            </div>
+
+
+            <div id="container">
+                <div id="listaAnimais">
+
+                </div>
+                <div class="animais">
+
+                    <a href="formsanimal.html" id="p_animais">+</a>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="container2">
+
+            <div class="caixas">
+
+                <p>🔎</p>
+
+                <h3>Encontre seu pet</h3>
+
+                <p>
+                    Navegue pelos animais disponíveis e encontre
+                    aquele que combina com você.
+                </p>
+
+            </div>
+
+
+            <div class="caixas">
+
+                <p>💬</p>
+
+                <h3>Entre em contato</h3>
+
+                <p>
+                    Envie uma mensagem para a ONG ou responsável
+                    pelo animal.
+                </p>
+
+            </div>
+
+
+            <div class="caixas">
+
+                <p>🏠</p>
+
+                <h3>Leve para casa</h3>
+
+                <p>
+                    Após a aprovação, prepare sua casa para receber
+                    seu novo melhor amigo.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="rodape">
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+
+                <h2>
+                    🐾
+                    <span>Adota</span><b>Pet</b><span>.com</span>
+                </h2>
+
+                <p>
+                    ✦ Conectando pessoas e animais que precisam
+                    de um lar cheio de amor ✦
+                </p>
+
+            </div>
+
+
+            <div class="rodape-coluna">
+
+                <h3>AdotaPet</h3>
+
+                <a href="sobre.html">Sobre nós</a>
+
+                <a href="index.html">Encontrar um pet</a>
+
+            </div>
+
+
+            <div class="rodape-coluna">
+
+                <h3>Ajuda</h3>
+
+                <a href="adotar.html">Como adotar</a>
+
+                <a href="termos.html">Termos de uso</a>
+
+            </div>
+
+
+            <div class="rodape-coluna"> 
+
+                <h3>Siga o AdotaPet.com</h3>
+
+                <a href="#">Instagram</a>
+
+                <a href="#">TikTok</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+ 
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="animacao.js"></script>
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>

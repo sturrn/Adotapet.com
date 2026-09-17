@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dados dos Animais</title>
+</head>
+<body>
+
+     <header>
+        <div>
+            <h1>🐾Adota<span>Pet</span>.com</h1>
+        </div>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="perfil.html">Perfil</a>
+        </nav>
+        <a href="cadastro.html">
+            <button>Adote agora</button>
+        </a>
+    </header>
+
+    <main class="cadastro-main">
+        <section class="titulo">
+            <h1>Cadastro de Animais</h1>
+
+            <form id="formulario">
+                <label for="nomeAnimal">Nome do Animal:</label>
+                <input type="text" id="nomeAnimal" placeholder="Digite o nome do animal..." required>
+                <label for="idade">Idade do Animal:</label>
+                <input type="number" id="idade" placeholder="Digite a idade dos animais..." required>
+                <label for="tipo">Tipo do Animal:</label>
+                <select id="especie" name="especie" required>
+                    <option value="" selected disabled>selecione uma especie...</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Cao">Cão</option>
+                </select>
+                <label for="raca">Raça do Animal:</label>
+                <input type="text" id="raca" placeholder="Digite a raça do animal..." required>
+                <label for="sexo">Sexo do Animal:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="" selected disabled>selecione o sexo do animal...</option>
+                    <option value="Masc">Masculino</option>
+                    <option value="Fem">Feminino</option>
+                </select>
+
+                <label for="porte">Porte do Animal:</label>
+                <select id="porte" name="porte" required>
+                    <option value="" selected disabled>selecione o porte do animal...</option>
+                    <option value="Pequeno">Pequeno</option>
+                    <option value="Medio">Médio</option>
+                    <option value="Grande">Grande</option>
+                </select>
+
+                <label for="cor">Cor do Animal:</label>
+                <input type="text" id="cor" placeholder="Digite a cor do animal..." required>
+
+                <label for="pelagem">Pelagem do Animal:</label>
+                <input type="text" id="pelagem" placeholder="Digite a pelagem do animal...">
+
+                <label for="cidade">Cidade do Animal:</label>
+                <input type="text" id="cidade" placeholder="Digite a cidade do animal...">
+
+                <label for="regiao">Região do Animal:</label>
+                <input type="text" id="regiao" placeholder="Digite a regiao do animal...">
+
+                <button type="submit">Enviar</button>
+        </section>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
