@@ -21,7 +21,7 @@ gsap.to('#auau',{
     
 })
 
-gsap.to('#auau',{
+gsap.to('#miau',{
     x: 5,
     y: 70,
     rotation: 2,

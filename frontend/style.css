@@ -1043,11 +1043,16 @@ body.modo-escuro a {
     border-radius: 20px;
     cursor: pointer;
     background: #333;
-    color: w;
+    color: white;
 }
 
 div.modo-escuro{
-    
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #333;
+    color: white;
 }
 
 
@@ -1081,4 +1086,7 @@ div.modo-escuro{
         justify-self: center;
     }
     
+    nav a {
+        display: none;
+    }
 }
