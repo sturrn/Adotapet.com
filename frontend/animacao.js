@@ -1,3 +1,4 @@
+
 gsap.registerPlugin(ScrollTrigger);
  
 gsap.from("header", {
@@ -114,5 +115,4 @@ gsap.from(".rodape-conteudo", {
     duration: 0.8,
     ease: "power2.out"
 });
-
 
