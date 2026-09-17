@@ -1004,6 +1004,15 @@ body>p {
     justify-content: space-evenly;
 }
 
+/*CADASTRO*/
+
+#auau{
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: right;
+    margin: 90px;
+}
 
 /*modo escuro*/
 
@@ -1061,5 +1070,8 @@ body.modo-escuro a {
     }
 
     nav {
-        gap:10px
+        gap:10px;
+        
     }
+
+}
