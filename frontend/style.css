@@ -1089,4 +1089,8 @@ div.modo-escuro{
     nav a {
         display: none;
     }
+
+    header button{
+        display: none;
+    }
 }
