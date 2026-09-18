@@ -17,7 +17,7 @@ class Animal {
         this.cor = cor;
         this.cidade = cidade;
         this.regiao = regiao;
-        this.status = "false";
+        this.status = false;
     }
 }
 
@@ -52,16 +52,20 @@ class GerenciadorAnimal {
     }
 
     alternarStatus(id) {
-        this.status = false;
+        const animal = this.lista.find(item => item.id === id);
+        if (animal) {
+            animal.status = !animal.status;
+            this.salvar();
+            this.exibir();
+        }
     }
 
     mudarStatus(id) {
-        if (this.status) {
-            return "adotado"
+        const animal = this.lista.find(item => item.id === id);
+        if (!animal) {
+            return "Nao adotado";
         }
-        else {
-            return "Nao adotado"
-        }
+        return animal.status ? "adotado" : "Nao adotado";
     }
 
     exibir() {
@@ -88,6 +92,9 @@ class GerenciadorAnimal {
                 <p>Cor: ${animal.cor}</p>
                 <p>Cidade: ${animal.cidade}</p>
                 <p>Região: ${animal.regiao}</p>
+                <p>Status: ${this.mudarStatus(animal.id)}</p>
+                <button class="buttonCard" data-id="${animal.id}" data-acao="remover">Remover</button>
+                <button class="buttonCard" data-id="${animal.id}" data-acao="status">${animal.status ? "Adotado" : "Adotar"}</button>
                 </div>
             `
                 listadalista.appendChild(cardAnimal);
@@ -127,18 +134,37 @@ if (formulario) {
 }
 
 
-const botao = document.getElementById("modoEscuro");
- 
-botao.addEventListener("click", function() {
-    document.body.classList.toggle("modo-escuro");
- 
-    if (document.body.classList.contains("modo-escuro")) {
-        botao.innerHTML = "☀️ Modo claro";
+const modo = document.getElementById("modoEscuro");
+
+modo.addEventListener("click", () => {
+    document.body.classList.toggle("claro");
+
+    if (document.body.classList.contains("claro")) {
+        modo.textContent = "🌙 Modo escuro";
     } else {
-        botao.innerHTML = "🌙 Modo escuro";
+        modo.textContent = "☀️ Modo claro";
     }
 });
 
+if (listaAnimais) {
+    listaAnimais.addEventListener("click", function (e) {
+        const botaoAnimal = e.target.closest("button");
+        if (!botaoAnimal) {
+            return;
+        }
+
+        const id = Number(botaoAnimal.dataset.id);
+        const acao = botaoAnimal.dataset.acao;
+
+        if (acao === "remover") {
+            gerenciador.remover(id);
+        }
+
+        if (acao === "status") {
+            gerenciador.alternarStatus(id);
+        }
+    });
+}
 
 
 gerenciador.exibir();

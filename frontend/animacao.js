@@ -1,4 +1,3 @@
-
 gsap.registerPlugin(ScrollTrigger);
  
 gsap.from("header", {
@@ -33,6 +32,13 @@ gsap.to('#miau',{
     yoyo: true
     
 })
+
+gsap.to(".linha1", {
+    xPercent: -50,
+    duration: 18,
+    ease: "none",
+    repeat: -1
+});
  
 tl.from("#titulo", {
     scale: 1,

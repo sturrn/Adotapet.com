@@ -15,13 +15,12 @@
         </div>
 
         <nav>
-            <a href="index.html">Início</a>
-            <a href="sobre.html">Sobre nós</a>
-            <a href="perfil.html">Perfil</a>
+            <a href="index.html">Voltar</a>
         </nav>
         <a href="cadastro.html">
             <button>Adote agora</button>
         </a>
+        <button id="modoEscuro">🌙 Modo escuro</button>
     </header>
 
     <main class="cadastro-main">
@@ -35,9 +34,9 @@
                 <input type="number" id="idade" placeholder="Digite a idade dos animais..." required>
                 <label for="tipo">Tipo do Animal:</label>
                 <select id="especie" name="especie" required>
-                    <option value="" selected disabled>selecione uma especie...</option>
-                    <option value="Gato">Gato</option>
-                    <option value="Cao">Cão</option>
+                    <option value="" selected disabled id="especie">selecione uma especie...</option>
+                    <option value="Gato" id="especie">Gato</option>
+                    <option value="Cao" id="especie">Cachorro</option>
                 </select>
                 <label for="raca">Raça do Animal:</label>
                 <input type="text" id="raca" placeholder="Digite a raça do animal..." required>
