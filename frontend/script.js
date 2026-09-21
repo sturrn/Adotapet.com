@@ -6,7 +6,7 @@ class Usuario {
 }
 
 class Animal {
-    constructor(id, nomeAnimal, especie, raca, sexo, idade, porte, cor, cidade, regiao) {
+    constructor(id, nomeAnimal, especie, raca, sexo, idade, porte, cor, cidade, estado) {
         this.id = id;
         this.nomeAnimal = nomeAnimal;
         this.especie = especie;
@@ -16,7 +16,7 @@ class Animal {
         this.porte = porte;
         this.cor = cor;
         this.cidade = cidade;
-        this.regiao = regiao;
+        this.estado = estado;
         this.status = false;
     }
 }
@@ -34,8 +34,8 @@ class GerenciadorAnimal {
         localStorage.setItem("animais", JSON.stringify(this.lista));
     }
 
-    adicionar(nomeAnimal, especie, raca, sexo, idade, porte, cor, cidade, regiao) {
-        const animal = new Animal(this.IdSucessor, nomeAnimal, especie, raca, sexo, idade, porte, cor, cidade, regiao);
+    adicionar(nomeAnimal, especie, raca, sexo, idade, porte, cor, cidade, estado) {
+        const animal = new Animal(this.IdSucessor, nomeAnimal, especie, raca, sexo, idade, porte, cor, cidade, estado);
         this.lista.push(animal);
         this.IdSucessor++;
         this.salvar();
@@ -91,7 +91,7 @@ class GerenciadorAnimal {
                 <p>Porte: ${animal.porte}</p>
                 <p>Cor: ${animal.cor}</p>
                 <p>Cidade: ${animal.cidade}</p>
-                <p>Região: ${animal.regiao}</p>
+                <p>Estado: ${animal.estado}</p>
                 <p>Status: ${this.mudarStatus(animal.id)}</p>
                 <button class="buttonCard" data-id="${animal.id}" data-acao="remover">Remover</button>
                 <button class="buttonCard" data-id="${animal.id}" data-acao="status">${animal.status ? "Adotado" : "Adotar"}</button>
@@ -111,6 +111,8 @@ const nome = document.getElementById("nome");
 const email = document.getElementById("email");
 const botaoPessoa = document.getElementById("botaoPessoa");
 const formulario = document.getElementById("formulario");
+const pesquisa = document.getElementById("pesquisa");
+const lupa = document.getElementById("lupa");
 
 const gerenciador = new GerenciadorAnimal();
 if (formulario) {
@@ -125,11 +127,11 @@ if (formulario) {
         const porte = document.getElementById("porte").value;
         const cor = document.getElementById("cor").value;
         const cidade = document.getElementById("cidade").value;
-        const regiao = document.getElementById("regiao").value;
+        const estado = document.getElementById("estado").value;
 
 
-        gerenciador.adicionar(nomeAnimal, especie, raca, sexo, idade, porte, cor, cidade, regiao);
-        window.location.href = "index.html";
+        gerenciador.adicionar(nomeAnimal, especie, raca, sexo, idade, porte, cor, cidade, estado);
+        window.location.href = "animais.html";
     });
 }
 
@@ -140,10 +142,11 @@ modo.addEventListener("click", () => {
     document.body.classList.toggle("claro");
 
     if (document.body.classList.contains("claro")) {
-        modo.textContent = "🌙 Modo escuro";
+        modo.textContent = " Modo escuro";
     } else {
-        modo.textContent = "☀️ Modo claro";
+        modo.textContent = "Modo claro";
     }
+
 });
 
 if (listaAnimais) {
@@ -166,5 +169,19 @@ if (listaAnimais) {
     });
 }
 
+function pesquisar() {
+  if (!pesquisa || !listaAnimais) 
+    return;
+ 
+  const termo = pesquisa.value.trim().toLowerCase();
+  const cards = document.querySelectorAll("#listaAnimais .listadalista li");
+ 
+  gerenciador.lista.forEach((animal, i) => {
+    const texto = `${animal.nomeAnimal} ${animal.estado} ${animal.especie}`.toLowerCase();
+    cards[i].hidden = !texto.includes(termo);
+  });
+}
+ 
+pesquisa.addEventListener("input", pesquisar);
 
 gerenciador.exibir();

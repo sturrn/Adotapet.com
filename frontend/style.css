@@ -382,16 +382,6 @@ body>p {
     background: var(--accent);
 }
 
-#btn-comofunciona {
-    background: transparent;
-    border: 1px solid #715464;
-    color: var(--cream);
-}
-
-#btn-comofunciona:hover {
-    background: var(--surface2);
-}
-
 #img-hero {
     width: 100%;
     max-width: 500px;
@@ -407,12 +397,7 @@ body>p {
     justify-content: center;
 }
 
-#pesquisa_inicial {
-    padding: 10px 10px;
-    margin: 10px 10px;
-    background: var(--bg2);
-    border-bottom: 1px solid var(--border);
-}
+
 
 #div_lupa {
     width: 90%;
@@ -454,65 +439,14 @@ body>p {
     border-radius: 9px;
 }
 
-#container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 35px auto 0;
-}
-
-#listaAnimais,
-#container {
+#listaAnimais{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
+    grid-template-columns: repeat(4, 1fr);
+    margin: 50px 70px;
+    justify-content: center;
+    align-items: center;
 
-.animais {
-    min-height: 330px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    transition: .3s;
-    overflow: hidden;
-}
 
-.animais:hover {
-    transform: translateY(-6px);
-    border-color: var(--accent);
-    box-shadow: var(--shadow);
-    background: var(--surface2);
-}
-
-.animais img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 14px;
-    transition: .4s;
-    cursor: pointer;
-}
-
-.animais:hover img {
-    transform: scale(1.02);
-}
-
-.info_animais {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.info_animais h3 {
-    font-size: 19px;
-    color: var(--cream);
-}
-
-.info_animais p {
-    font-size: 13px;
 }
 
 .animais button {
@@ -748,10 +682,6 @@ body>p {
     margin-left: 20px;
 }
 
-.dados-thor {
-    padding: 20px;
-}
-
 .titulo-animal {
     color: var(--accent);
     font-size: 18px;
@@ -838,6 +768,7 @@ body>p {
     color: var(--cream);
     box-shadow: 10px 10px 0 #382631;
     transition: .3s;
+    flex-wrap: wrap;
 }
 
 .carD:hover {
@@ -857,10 +788,15 @@ body>p {
 
 .listadalista {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 35px 5%;
     list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   
+
 }
 
 .conteudo-termos {
@@ -1001,25 +937,6 @@ body>p {
     text-align: right;
 }
 
-#lunaP {
-    margin-left: 20%;
-    margin-right: 20%;
-    background: var(--bg);
-    color: var(--cream);
-}
-
-#modal {
-    display: none;
-    position: absolute;
-    z-index: 9999;
-    width: 500px;
-    height: 500px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    box-shadow: var(--shadow);
-}
-
 .letreiro-cadastro {
     width: 100%;
     margin: 0;
@@ -1111,10 +1028,6 @@ body.claro #img-hero {
     box-shadow: 22px 28px 0 #e3cdd1;
 }
 
-body.claro #pesquisa_inicial {
-    background: #fff8f5;
-}
-
 body.claro #div_lupa input {
     background: #fff;
     color: #382d33;
@@ -1195,16 +1108,36 @@ body.claro .rodape-coluna h3 {
         flex-wrap: wrap;
     }
 
+      .texto-quem p {
+        font-size:18px;
+    }
+
+    .texto-quem h2 {
+        font-size:25px;
+    }
+
+    .caixa p {
+        font-size:18px;
+    }
+    
+    .caixa h4 {
+    font-size:25px;
+    }
+
+
     header h1 {
         margin-right: auto;
     }
 
     nav {
-        gap: 2px;
+        gap: 10px;
+        border: 1px rgba(136, 6, 67, 0.322) solid;
+        padding: 10px;
     }
 
     nav a {
         padding: 7px 8px;
+        background-color: rgba(136, 6, 67, 0.322);
     }
 
     #hero {
@@ -1229,7 +1162,7 @@ body.claro .rodape-coluna h3 {
     #container,
     #listaAnimais,
     .listadalista {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
 
     .informacao {
@@ -1240,9 +1173,6 @@ body.claro .rodape-coluna h3 {
         grid-template-columns: 1fr 1fr;
     }
 
-    .carD {
-        margin: 10px 0;
-    }
 }
 
 
@@ -1261,6 +1191,14 @@ body.claro .rodape-coluna h3 {
         width: 100%;
         order: 3;
         justify-content: center;
+        gap: 10px;
+        border: 1px rgba(136, 6, 67, 0.322) solid;
+        padding: 10px;
+    }
+
+    nav a {
+        padding: 7px 8px;
+        background-color: rgba(136, 6, 67, 0.322);
     }
 
     header button,
@@ -1300,22 +1238,17 @@ body.claro .rodape-coluna h3 {
     }
 
     #img-hero {
-        height: 320px;
+        width:400px;
+        height: 400px;
         max-width: 100%;
     }
 
-    #container,
+    
     #listaAnimais,
     .listadalista,
     #container2,
-
-
     .informacao {
         grid-template-columns: 1fr;
-    }
-
-    #container {
-        padding: 0 5%;
     }
 
     .animais {
@@ -1417,25 +1350,10 @@ body.claro .rodape-coluna h3 {
         min-height: 350px;
     }
 
-    .listadalista {
-        padding: 25px 6%;
-    }
-
     #miau,
     #auau {
         margin: 35px 6%;
         font-size: 24px;
-    }
-
-    #lunaP {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    #modal {
-        width: 90%;
-        max-width: 500px;
-        height: auto;
     }
 
     .letreiro-cadastro .linha {

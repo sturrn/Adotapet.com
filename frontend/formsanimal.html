@@ -20,7 +20,7 @@
         <a href="cadastro.html">
             <button>Adote agora</button>
         </a>
-        <button id="modoEscuro">🌙 Modo escuro</button>
+        <button id="modoEscuro">Mudar Tema</button>
     </header>
 
     <main class="cadastro-main">
@@ -36,7 +36,7 @@
                 <select id="especie" name="especie" required>
                     <option value="" selected disabled id="especie">selecione uma especie...</option>
                     <option value="Gato" id="especie">Gato</option>
-                    <option value="Cao" id="especie">Cachorro</option>
+                    <option value="cachorro" id="especie">Cachorro</option>
                 </select>
                 <label for="raca">Raça do Animal:</label>
                 <input type="text" id="raca" placeholder="Digite a raça do animal..." required>
@@ -64,8 +64,37 @@
                 <label for="cidade">Cidade do Animal:</label>
                 <input type="text" id="cidade" placeholder="Digite a cidade do animal...">
 
-                <label for="regiao">Região do Animal:</label>
-                <input type="text" id="regiao" placeholder="Digite a regiao do animal...">
+                <label for="estado">Estado do Animal:</label>
+                        <select id="estado" name="estado">
+                            <option value="">Selecione o estado...</option>
+                            <option value="AC">AC - Acre</option>
+                            <option value="AL">AL - Alagoas</option>
+                            <option value="AP">AP - Amapá</option>
+                            <option value="AM">AM - Amazonas</option>
+                            <option value="BA">BA - Bahia</option>
+                            <option value="CE">CE - Ceará</option>
+                            <option value="DF">DF - Distrito Federal</option>
+                            <option value="ES">ES - Espírito Santo</option>
+                            <option value="GO">GO - Goiás</option>
+                            <option value="MA">MA - Maranhão</option>
+                            <option value="MT">MT - Mato Grosso</option>
+                            <option value="MS">MS - Mato Grosso do Sul</option>
+                            <option value="MG">MG - Minas Gerais</option>
+                            <option value="PA">PA - Pará</option>
+                            <option value="PB">PB - Paraíba</option>
+                            <option value="PR">PR - Paraná</option>
+                            <option value="PE">PE - Pernambuco</option>
+                            <option value="PI">PI - Piauí</option>
+                            <option value="RJ">RJ - Rio de Janeiro</option>
+                            <option value="RN">RN - Rio Grande do Norte</option>
+                            <option value="RS">RS - Rio Grande do Sul</option>
+                            <option value="RO">RO - Rondônia</option>
+                            <option value="RR">RR - Roraima</option>
+                            <option value="SC">SC - Santa Catarina</option>
+                            <option value="SP">SP - São Paulo</option>
+                            <option value="SE">SE - Sergipe</option>
+                            <option value="TO">TO - Tocantins</option>
+                        </select>
 
                 <button type="submit">Enviar</button>
         </section>
